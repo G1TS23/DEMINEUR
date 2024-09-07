@@ -1,4 +1,39 @@
-<div class="grid">
-    GRILLE
-    <p *ngFor="let box of grid"> :{{ box }}: </p>
+
+<div class="gameboard">
+
+    <div class="display">
+        <div><button (click)="resetGame()" class="round">Restart</button></div>
+        <div><button (click)="goToMenu()" class="round">Menu</button></div>
+
+        <div id="infos">
+            <span *ngIf="!this.isWin && !this.isLost">{{ this.nbMines - this.nbFlag }} 💣</span>
+            <span *ngIf="isLost || isWin" [ngClass]="{ 'gagne': isWin, 'perdu': isLost }">
+                {{ this.isLost ? "PERDU 😣" : "GAGNÉ 😃" }}
+            </span>
+        </div>
+    </div>
+
+    <div class="grid">
+        <button *ngFor="let box of grid" 
+                (contextmenu)="onRightClick(box.id)" 
+                (dbclick)="onRightClick(box.id)" 
+                (click)="onClick(box.id)" 
+                [ngClass]="{ 
+                    'pattern3' : (isEven(box.id) && isRowEven(box.id)),
+                    'pattern4' : (!isEven(box.id) && !isRowEven(box.id)),
+                    'pattern2': (isEven(box.id) && !isRowEven(box.id)),
+                    'boom': box.isMined && box.isClicked, 
+                    'shown' : box.isClicked && !box.isMined,
+                    'lost': box.isMined && isLost && !box.isClicked
+                }" [disabled]="isLost || box.isClicked || isWin"
+                [ngStyle]="{ color: colors[box.nbNeighboors - 1]}"
+            >
+        <span *ngIf="box.isClicked && box.nbNeighboors !== 0" >
+            {{ box.nbNeighboors }}
+        </span>
+        <span class="flag" *ngIf="box.isFlag && !isLost" >&#x2691;</span>
+        <span *ngIf="box.isMined && isLost" >💣</span>
+        </button>
+    </div>
 </div>
+

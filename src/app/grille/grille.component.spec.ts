@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { CommonModule, NgFor } from '@angular/common';
 
 import { GrilleComponent } from './grille.component';
 

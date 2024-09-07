@@ -1,3 +1,160 @@
+
+
+:root{
+    --rows: 10;
+    --columns: 10;
+    
+}
+
+
+
+.gameboard{
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 30px auto;
+    border-radius: 25px;
+    box-shadow: 0 3px 10px #AAA;
+    padding: 20px 20px;
+}
+
+
 .grid{
-    margin: auto;
+    margin: 15px;
+    display: grid;
+    
+    border-radius: 10px;
+    overflow: hidden;
+    grid-template-rows: repeat(10, 40px);
+    grid-template-columns: repeat(10, 40px);
+    
+}
+
+
+
+.display{
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    align-content: space-evenly;
+    div{
+        
+        align-self: center;
+        text-align: center;
+        font-weight: 900;
+        font-size: 30px;
+
+        #infos{
+            font-size: 4em;
+            background-color: #222;
+        }
+    }
+
+}
+
+
+button{
+    font-weight: 900;
+    font-size: 20px;
+    border: none;
+    border-radius: 0;
+    margin: 0;
+    background-color: rgb(82, 153, 82);
+    text-align: center;
+}
+
+.pattern3 {
+    background-image: repeating-linear-gradient(75deg, rgba(255,255,255, 0.25), rgba(255,255,255, 0.25) 2px, transparent 3px, transparent 7px);
+    background-size: 6px 8px;
+    background-color: rgb(72, 182, 72);
+}
+
+.pattern4 {
+    background-image: repeating-linear-gradient(-26deg, rgba(255,255,255, 0.25), rgba(255,255,255, 0.25) 2px, transparent 3px, transparent 7px);
+    background-size: 6px 8px;
+    background-color: rgb(72, 182, 72);
+}
+
+.pattern2 {
+    background-image: repeating-linear-gradient(-45deg, rgba(255,255,255, 0.25), rgba(255,255,255, 0.25) 2px, transparent 1px, transparent 6px);
+    background-size: 4px 4px;
+    background-color: rgb(137, 214, 137);
+}
+
+.light{
+    background-image: none;
+    background-color: rgb(178, 237, 178);
+}
+.dark{
+    background-color: rgb(62, 121, 62);
+    background-image: none;
+}
+
+.shown{
+    background-image: none;
+    background-color: rgb(173, 124, 89);
+}
+
+.cliked{
+    
+    background-color: rgb(173, 124, 89);
+}
+
+.lost{
+    background-image: none;
+    color: rgb(173, 124, 89);
+    background-color: rgb(173, 124, 89);
+}
+
+button:disabled{
+    color : black;
+}
+
+.round{
+    text-align: center;
+    border-radius: 200px;
+    padding: 5px 15px;
+    margin: 10px auto;
+    background-color: white; 
+}
+
+.round:hover{
+    background-color: rgb(204, 237, 204); 
+}
+
+.flag{
+    font-size: 30px;
+    color: black;
+}
+
+.gagne{
+    color: green;
+}
+
+.perdu{
+    color: red;
+}
+
+.boom{
+    background-image: none;
+    background-color: red;
+}
+
+@media screen and (max-width: 500px) {
+
+    .grid{
+        grid-template-rows: repeat(10, 25px);
+        grid-template-columns: repeat(10, 25px);
+    }
+
+    button{
+        font-size: 15px;
+    }
+
+    .display{
+        div{
+            font-size: 20px;
+        }
+    }
+    
 }
