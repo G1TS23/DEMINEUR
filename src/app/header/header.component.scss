@@ -1,0 +1,24 @@
+
+.container{
+    margin: 10px auto;
+    padding: 0 25px;
+    max-width: 900px;
+    border-radius: 40px;
+    box-shadow: 0 3px 10px #AAA;
+}
+
+p{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 5em;
+    font-weight: 900;
+    text-align: center;
+}
+
+@media screen and (max-width: 750px) {
+
+    p{
+        font-size: 2em;
+    }
+    
+}
