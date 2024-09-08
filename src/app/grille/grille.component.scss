@@ -19,7 +19,6 @@
     padding: 20px 20px;
 }
 
-
 .grid{
     margin: 15px;
     display: grid;
@@ -142,13 +141,22 @@ button:disabled{
 
 @media screen and (max-width: 500px) {
 
+    .gameboard{
+      
+        margin: 0;
+        border-radius: 0;
+        padding: 0;
+        box-shadow: none;
+    }
+    
     .grid{
-        grid-template-rows: repeat(10, 25px);
-        grid-template-columns: repeat(10, 25px);
+        grid-template-rows: repeat(10, 35px);
+        grid-template-columns: repeat(10, 35px);
     }
 
     button{
         font-size: 15px;
+        text-align: center;
     }
 
     .display{
