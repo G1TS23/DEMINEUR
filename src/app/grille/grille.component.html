@@ -4,6 +4,10 @@
     <div class="display">
         <div><button (click)="resetGame()" class="round">Restart</button></div>
         <div><button (click)="goToMenu()" class="round">Menu</button></div>
+        <div><button (click)="putFlag()" class="round">
+            <span *ngIf="!flag">Flag</span>
+            <span *ngIf="flag">Discover</span>
+        </button></div>
 
         <div id="infos">
             <span *ngIf="!this.isWin && !this.isLost">{{ this.nbMines - this.nbFlag }} 💣</span>
