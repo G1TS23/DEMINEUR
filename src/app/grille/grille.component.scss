@@ -32,9 +32,9 @@
 
 
 .display{
-    display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
-    align-content: space-evenly;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     div{
         
         align-self: center;

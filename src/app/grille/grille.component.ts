@@ -283,13 +283,14 @@ export class GrilleComponent implements OnInit{
           this.grid[boxId].isClicked = true;
           return ;
         } 
-
+        this.grid[boxId].isFlag = false;
+        this.nbFlag = this.grid.filter(box => box.isFlag).length;
         this.grid[boxId].isClicked = true;
         this.showNeighboors(boxId);
+
         const boxCliked: number = this.grid.filter(box => box.isClicked).length;
         
         if (boxCliked === this.nbBox - this.nbMines){
-          //console.log("YOU WIN !!!");
           this.isWin = true;
         }
      
