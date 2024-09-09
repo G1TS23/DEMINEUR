@@ -36,7 +36,7 @@ export class GrilleComponent implements OnInit{
   columns!: number;
   nbFlag!: number;
   colors!: string[];
-  flag!: boolean;
+  flagMode!: boolean;
 
   ngOnInit(): void {
     
@@ -49,7 +49,7 @@ export class GrilleComponent implements OnInit{
     this.isLost = false;
     this.isWin = false;
     this.nbFlag = 0;
-    this.flag = false;
+    this.flagMode = false;
     this.prepareGrid();
     this.setNeighboors();
     this.setColors();
@@ -273,7 +273,7 @@ export class GrilleComponent implements OnInit{
 
 
   onClick(boxId: number): void{
-        if(this.flag){
+        if(this.flagMode){
           this.onRightClick(boxId);
           return;
         }
@@ -303,8 +303,8 @@ export class GrilleComponent implements OnInit{
     }
   }
 
-  putFlag(): void{
-    this.flag = !this.flag;
+  toggleFlagMode(): void{
+    this.flagMode = !this.flagMode;
   }
 
   resetGame(): void{

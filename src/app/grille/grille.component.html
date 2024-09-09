@@ -4,9 +4,9 @@
     <div class="display">
         <div><button (click)="resetGame()" class="round">Restart</button></div>
         <div><button (click)="goToMenu()" class="round">Menu</button></div>
-        <div><button (click)="putFlag()" class="round">
-            <span *ngIf="!flag">&#x2691;</span>
-            <span *ngIf="flag">Discover</span>
+        <div><button (click)="toggleFlagMode()" class="round">
+            <span *ngIf="!flagMode">&#x2691;</span>
+            <span *ngIf="flagMode">Discover</span>
         </button></div>
 
         <div id="infos">
