@@ -113,11 +113,16 @@ button:disabled{
     border-radius: 200px;
     padding: 5px 15px;
     margin: 10px auto;
-    background-color: white; 
+    background-color: rgb(204, 237, 204);
+}
+
+.flag-mode{
+    color: white;
+    background-color: rgb(62, 121, 62);
 }
 
 .round:hover{
-    background-color: rgb(204, 237, 204); 
+    background-color: rgb(62, 121, 62);  
 }
 
 .flag{
@@ -126,10 +131,12 @@ button:disabled{
 }
 
 .gagne{
+    font-size: 20px;
     color: green;
 }
 
 .perdu{
+    font-size: 20px;
     color: red;
 }
 

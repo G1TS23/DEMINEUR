@@ -168,6 +168,7 @@ export class GrilleComponent implements OnInit{
   showUpLeft(boxId: number): void{
     if(!this.grid[boxId - 11].isClicked){
       this.grid[boxId - 11].isClicked = true;
+      this.grid[boxId - 11].isFlag = false;
       this.showNeighboors(boxId - 11);
     }
   }
@@ -175,13 +176,15 @@ export class GrilleComponent implements OnInit{
   showUp(boxId: number):void{
     if(!this.grid[boxId - 10].isClicked){
       this.grid[boxId - 10].isClicked = true;
-    this.showNeighboors(boxId - 10);
+      this.grid[boxId - 10].isFlag = false;
+      this.showNeighboors(boxId - 10);
     }
   }
 //fait apparaitre la case au dessus à droite
   showUpRight(boxId: number):void{
     if(!this.grid[boxId - 9].isClicked){
       this.grid[boxId - 9].isClicked = true;
+      this.grid[boxId - 9].isFlag = false;
     this.showNeighboors(boxId - 9);
     }
   }
@@ -189,6 +192,7 @@ export class GrilleComponent implements OnInit{
   showRight(boxId: number):void{
     if(!this.grid[boxId + 1].isClicked){
       this.grid[boxId + 1].isClicked = true;
+      this.grid[boxId + 1].isFlag = false;
       this.showNeighboors(boxId + 1);
     }
   }
@@ -196,6 +200,7 @@ export class GrilleComponent implements OnInit{
   showDownRight(boxId: number):void{
     if(!this.grid[boxId + 11].isClicked){
       this.grid[boxId + 11].isClicked = true;
+      this.grid[boxId + 11].isFlag = false;
       this.showNeighboors(boxId + 11);
     }
   }
@@ -203,6 +208,7 @@ export class GrilleComponent implements OnInit{
   showDown(boxId: number):void{
     if(!this.grid[boxId + 10].isClicked){
       this.grid[boxId + 10].isClicked = true;
+      this.grid[boxId + 10].isFlag = false;
       this.showNeighboors(boxId + 10);
     }
   }
@@ -210,6 +216,7 @@ export class GrilleComponent implements OnInit{
   showDownLeft(boxId: number):void{
     if(!this.grid[boxId + 9].isClicked){
       this.grid[boxId + 9].isClicked = true;
+      this.grid[boxId + 9].isFlag = false;
       this.showNeighboors(boxId + 9);
     }
   }
@@ -217,6 +224,7 @@ export class GrilleComponent implements OnInit{
   showLeft(boxId: number):void{
     if(!this.grid[boxId - 1].isClicked){
       this.grid[boxId - 1].isClicked = true;
+      this.grid[boxId - 1].isFlag = false;
       this.showNeighboors(boxId - 1);
     }
   }
@@ -314,6 +322,7 @@ export class GrilleComponent implements OnInit{
     this.isLost = false;
     this.isWin = false;
     this.nbFlag = 0;
+    this.flagMode = false;
   }
 
   goToMenu(){
