@@ -21,9 +21,9 @@ Reproduire la logique du jeu Démineur (génération de grille, détection des m
 
 ## 🚀 Lancer le projet
 
-\`\`\`bash
+```bash
 npm install
 ng serve
-\`\`\`
+```
 
 Application accessible sur `http://localhost:4200`.
