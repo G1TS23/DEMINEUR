@@ -1,27 +1,29 @@
-# Demineur
+# 💣 Démineur
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.1.
+Un jeu de démineur classique développé avec **Angular** et **TypeScript**.
 
-## Development server
+🔗 **Démo en ligne** : [boom-boom-boom.netlify.app](https://boom-boom-boom.netlify.app)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🎯 Objectif
 
-## Code scaffolding
+Reproduire la logique du jeu Démineur (génération de grille, détection des mines, propagation des cases vides, gestion des drapeaux) en s'appuyant sur les fondamentaux d'Angular.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 🏗️ Points techniques
 
-## Build
+- Génération dynamique de la grille et placement aléatoire des mines
+- Algorithme de propagation (flood fill) pour la révélation des cases vides
+- Gestion d'état du jeu (en cours / gagné / perdu) via les composants Angular
+- Interface réactive aux interactions utilisateur (clic gauche / clic droit pour les drapeaux)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 🛠️ Stack
 
-## Running unit tests
+`Angular` · `TypeScript`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 🚀 Lancer le projet
 
-## Running end-to-end tests
+\`\`\`bash
+npm install
+ng serve
+\`\`\`
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Application accessible sur `http://localhost:4200`.
