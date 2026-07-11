@@ -10,8 +10,26 @@
   <base href="/">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <style>
+    .site-credit {
+      position: fixed;
+      right: 0.6rem;
+      bottom: 0.5rem;
+      z-index: 9999;
+      font-family: "Montserrat", sans-serif;
+      font-size: 0.72rem;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 0.25rem 0.55rem;
+      border-radius: 6px;
+    }
+    .site-credit a { color: #fff; text-decoration: none; }
+    .site-credit a:hover { text-decoration: underline; }
+  </style>
 </head>
 <body>
   <app-root></app-root>
+  <footer class="site-credit">
+    <a href="https://olivier.falahi.org" target="_blank" rel="noopener">Un projet d'Olivier Falahi ↗</a>
+  </footer>
 </body>
 </html>
