@@ -1,0 +1,12 @@
+# Configuration de déploiement Netlify
+# Application Angular : `ng build` génère dist/demineur/browser, servi tel quel.
+
+[build]
+  command = "npm run build"
+  publish = "dist/demineur/browser"
+
+[build.environment]
+  # Angular 20 exige Node ^20.19.0 || ^22.12.0 || >=24.0.0. Sans cette valeur,
+  # Netlify utilise sa version par défaut, qui peut changer sans prévenir et
+  # casser le build. Garder aligné avec .nvmrc et `engines` dans package.json.
+  NODE_VERSION = "24.18.0"
