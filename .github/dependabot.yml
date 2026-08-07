@@ -1,0 +1,18 @@
+version: 2
+
+updates:
+  # Les 102 alertes de l'issue #25 venaient d'un Angular reste en 18 jusqu'a sa
+  # fin de vie, faute de suivi. Ce fichier existe pour que ca ne se reproduise
+  # pas : les mineures et patches arrivent groupees en une PR mensuelle, les
+  # majeures separement puisqu'un majeur Angular demande `ng update` et une
+  # relecture.
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 5
+    groups:
+      minor-and-patch:
+        update-types:
+          - minor
+          - patch
