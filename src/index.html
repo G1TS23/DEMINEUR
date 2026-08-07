@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <title>Démineur</title>
+  <title>Démineur — le jeu classique, 4 niveaux</title>
   <meta name="description" content="Le démineur classique, jouable dans le navigateur : quatre niveaux de difficulté, de Facile à Cauchemar, et un mode drapeau.">
   <meta name="google-site-verification" content="EzLJyfi1es6usmPOdk846im38M2Z7Bx4dGT_Ul3FS2g" />
   <base href="/">
@@ -39,9 +39,29 @@
     }
     .site-credit a { color: #fff; text-decoration: none; }
     .site-credit a:hover { text-decoration: underline; }
+
+    /* Visible pour les moteurs et les lecteurs d'écran, masqué à l'œil. */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
   </style>
 </head>
 <body>
+  <!-- Titre de niveau 1 de la page, place dans le HTML statique pour qu'un
+       crawler le voie sans executer Angular : le titre visible du header est
+       un paragraphe rendu cote client, que Bing ne voyait pas. C'est donc le
+       seul titre de niveau 1 de la page. Ne pas ecrire de balise litterale
+       dans ce commentaire : il part en production et fausserait le comptage
+       des scanners SEO. -->
+  <h1 class="sr-only">Démineur</h1>
   <app-root></app-root>
   <footer class="site-credit">
     <a href="https://olivier.falahi.org" target="_blank" rel="noopener">Un projet d'Olivier Falahi ↗</a>
