@@ -5,14 +5,13 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component({
-  selector: 'app-grille',
-  standalone: true,
-  imports: [
-    CommonModule,
-    NgFor
-  ],
-  templateUrl: './grille.component.html',
-  styleUrl: './grille.component.scss'
+    selector: 'app-grille',
+    imports: [
+        CommonModule,
+        NgFor
+    ],
+    templateUrl: './grille.component.html',
+    styleUrl: './grille.component.scss'
 })
 
 export class GrilleComponent implements OnInit{
